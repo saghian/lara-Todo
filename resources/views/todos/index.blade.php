@@ -4,7 +4,7 @@
     <div class="card">
         <div class="card-header d-flex justify-content-between align-items-center">
             <h5 class="">Todos</h5>
-            <a href="#" class="btn btn-dark">create</a>
+            <a href="{{ route('category.create') }}" class="btn btn-dark">create</a>
         </div>
         <div class="card-body">
             <table class="table table-striped">

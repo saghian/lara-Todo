@@ -13,6 +13,15 @@ return new class extends Migration
     {
         Schema::create('todos', function (Blueprint $table) {
             $table->id();
+            $table->string('image');
+            $table->string('title');
+            $table->text('description');
+            $table->boolean('status')->default(0);
+
+            $table->unsignedBigInteger('category_id');
+            $table->foreign('category_id')->references('id')->on('categories');
+
+            $table->softDeletes();
             $table->timestamps();
         });
     }

@@ -1,11 +1,31 @@
 <?php
 
+use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('todos.index');
-});
+})->name('index');
+
+// Category Routs
+Route::resource('category', CategoryController::class);
+
+// ->except([
+//     'create', 'store', 'update', 'destroy'
+// ]);
+
+
+
+
+
+
+
+
+
+
+
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');
